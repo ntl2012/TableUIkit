@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Table UI Kit </title>
+        <style>
+            @font-face {
+                font-family: 'Roboto Mono Regular';
+                font-style: normal;
+                font-weight: normal;
+                src: local ('Roboto Mono Regular'), url('RobotoMono-Regular.woff') format('woff');
+            }
+            *{
+                /* width: 1286px;
+                height: 680px;
+                top: 42px;
+                left: 40px;
+                border-radius: 8px; */
+                /* display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                /* position: absolute; */
+                /* height: 680px;
+                left: 40px;
+                right: 40px;
+                top: 42px; */
+                /* margin-top: 42px;
+                margin-left: 40px; */
+                font-family: Roboto RobotoMono-Regular;   
+            }
+            .head{
+                width: 1400px;
+                height: 48px;
+                background-color: #F7F7F7;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 0px;
+                flex: none;
+                order: 0;
+                align-self: stretch;
+                flex-grow: 0;
+                border-radius: 8px;
+            }
+            tr{
+                width: 1286px;
+                height: 48px;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 0px;
+                flex: none;
+                order: 0;
+                align-self: stretch;
+                flex-grow: 0;
+            }
+            /* .check-all:checked ~ .{
+                display: block;
+            } */
+
+            tr th{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 14px 12px;
+                gap: 12px;
+                width: 250.5px;
+                height: 48px;
+            }
+            tr th .class{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 12px;
+                gap: 12px;
+                width: 140px;
+                height: 48px;
+            }
+            .invoice{
+                /* width: 144px;
+                height: 48px;
+                padding: 14px, 12px, 14px, 12px;
+                gap: 12px; */
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 6px 12px;
+                gap: 12px;
+                width: 144px;
+                height: 48px;
+                box-sizing: border-box;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+            }
+            .date{
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 14px 12px;
+                gap: 12px;
+                width: 250.5px;
+                height: 48px;
+                left: 144px;
+                flex: none;
+                order: 1;
+                flex-grow: 1;
+            }
+            .status{
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 2px 8px;
+                gap: 12px;
+                width: 75px;
+                height: 20px;
+                left: 144px;
+                flex: none;
+                order: 2;
+                flex-grow: 1;
+                border: 1px solid #CCE6FF;
+                border-radius: 20px;
+                background-color: #CCE6FF;
+                margin-right: 200px;
+                font-size: 12px;
+            }
+            .status-h{
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 14px 12px;
+                gap: 12px;
+                width: 75px;
+                height: 48px;
+                left: 144px;
+                flex: none;
+                order: 2;
+                flex-grow: 1;
+                margin-right: 200px;
+            }
+            .customer{
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 14px 12px;
+                gap: 12px;
+                width: 250.5px;
+                height: 48px;
+                left: 144px;
+                flex: none;
+                order: 3;
+                flex-grow: 1;
+                margin-right: 70px;
+            }
+            .type{
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 14px 12px;
+                gap: 12px;
+                width: 250.5px;
+                height: 48px;
+                left: 144px;
+                flex: none;
+                order: 4;
+                flex-grow: 1;
+            }
+            .blank-1{
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 12px;
+                gap: 12px;
+                width: 80px;
+                height: 48px;
+                left: 1446px;
+                flex: none;
+                order: 5;
+                flex-grow: 0;
+                color: #0080FF;
+            }
+            .blank-2{
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 12px;
+                gap: 12px;
+                width: 80px;
+                height: 48px;
+                left: 1460px;
+                flex: none;
+                order: 6;
+                flex-grow: 0;
+                font-family: Roboto !important; 
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <table>
+            <tr class="head">
+                <th class="invoice"> <input type="checkbox" class="check-all"> Invoice  </th>
+                <th class="date"> Date </th>
+                <th class="status-h"> Status </th>
+                <th class="customer"> Customer </th>
+                <th class="type"> Subscription Type </th>
+                <th class="blank-1"> </th>
+                <th class="blank-2"> </th>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status "> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status "> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+            <tr>
+                <td class="invoice"> <input type="checkbox" class="all"> #3333 </td>
+                <td class="date"> 10.02.2022 18:38 </td>
+                <td class="status"> In Progress </td>
+                <td class="customer"> <img src="./Avatar.png"> Username username@company.com </td>
+                <td class="type"> Monthly </td>
+                <td class="blank-1"> Action 1 </td>
+                <td class="blank-2"> Action 2 </td>
+            </tr>
+        </table>
+
+    </body>
+</html>
